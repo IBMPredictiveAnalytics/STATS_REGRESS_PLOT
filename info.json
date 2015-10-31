@@ -3,6 +3,6 @@
 "provider": [ "IBM" ],
 "software": [ "SPSS Statistics" ],
 "language": [ "Python 2" ],
-"category": [ "Visualization " ],
+"category": [ "Visualization" ],
 "promotion": [ "No" ] 
 }
