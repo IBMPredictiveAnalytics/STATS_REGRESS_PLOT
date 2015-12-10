@@ -1,0 +1,109 @@
+#/***********************************************************************
+# * Licensed Materials - Property of IBM 
+# *
+# * IBM SPSS Products: Statistics Common
+# *
+# * (C) Copyright IBM Corp. 1989, 2014
+# *
+# * US Government Users Restricted Rights - Use, duplication or disclosure
+# * restricted by GSA ADP Schedule Contract with IBM Corp. 
+# ************************************************************************/
+
+# NLS_ENCODING=UTF-8
+# IBMUPYTH
+
+
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-05-21 17:51+China Standard Time\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: ENCODING\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: STATS_REGRESS_PLOT.py:174
+msgid "Page specification must include both x and y sizes"
+msgstr ""
+"La spécification de la page doit inclure les tailles x et y"
+
+#: STATS_REGRESS_PLOT.py:189
+msgid "Relationship Plots"
+msgstr ""
+"Tracés de relation"
+
+#: STATS_REGRESS_PLOT.py:190
+msgid "Chart Legend Information"
+msgstr ""
+"Informations sur les légendes des graphiques"
+
+#: STATS_REGRESS_PLOT.py:193
+msgid "Legend Settings for the charts that follow.  Some settings do not apply to categorical charts."
+msgstr ""
+"Paramètres des légendes pour les graphiques suivants. Certains paramètres ne s'appliquent pas aux graphiques catégoriels."
+
+#: STATS_REGRESS_PLOT.py:194
+msgid "Settings"
+msgstr ""
+"Paramètres"
+
+#: STATS_REGRESS_PLOT.py:195
+msgid "Color by"
+msgstr ""
+"Couleur par"
+
+#: STATS_REGRESS_PLOT.py:195
+msgid "Fit Lines"
+msgstr ""
+"Courbes d'ajustement"
+
+#: STATS_REGRESS_PLOT.py:195
+msgid "Label by"
+msgstr ""
+"Libellé par"
+
+#: STATS_REGRESS_PLOT.py:195
+msgid "Shape by"
+msgstr ""
+"Forme par"
+
+#: STATS_REGRESS_PLOT.py:195
+msgid "Size by"
+msgstr ""
+"Taille par"
+
+#: STATS_REGRESS_PLOT.py:196
+msgid "Value"
+msgstr ""
+"Valeur"
+
+#: STATS_REGRESS_PLOT.py:213
+msgid "Y variables must have a scale measurement level: %s"
+msgstr ""
+"Les variables Y doivent disposer d'un niveau de mesure d'échelle : %s"
+
+#: STATS_REGRESS_PLOT.py:263
+msgid "The shape variable must be categorical: %s"
+msgstr ""
+"La variable de forme doit être catégorielle : %s"
+
+#: STATS_REGRESS_PLOT.py:423
+msgid "---"
+msgstr ""
+"---"
+
+#: STATS_REGRESS_PLOT.py:478
+msgid "Messages"
+msgstr ""
+"Messages"
+
+
+

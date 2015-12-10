@@ -1,0 +1,17 @@
+Name: STATS REGRESS PLOT
+Dialog-Specs: STATS_REGRESS_PLOT.spd
+Command-Specs: STATS_REGRESS_PLOT.xml
+Code-Files: STATS_REGRESS_PLOT.py
+Misc-Files: markdown.html,extsyntax.css,IBMdialogicon.png
+Summary: Plots useful in assessing regression relationships
+Description: This package provides plots that may be useful in assessi
+ ng relationships between variables.  Scatterplots or categorical plot
+ s are produced depending on the variable measurement levels.  Options
+  include fit lines, binning, paneling, and bordered boxplots on scatt
+ ers.
+Author: JKP, IBM SPSS
+Version: 1.2.7
+Product-Version: 20
+Date: 1/2/2014
+Plugins: Python
+Translation-Catalogues: lang
