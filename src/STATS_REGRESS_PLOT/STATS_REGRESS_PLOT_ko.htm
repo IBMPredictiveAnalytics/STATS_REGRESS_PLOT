@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>회귀 관계에 유용한 도표</title>
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+  </style>
+</head>
+
+<body>
+  <h1>회귀 관계에 유용한 도표</h1>이 명령문은
+  하나 이상의 종속변수와 설명 변수 세트 사이의 회귀 유형 관계를 평가하는 데
+  유용할 수 있는 도표 세트를 표시합니다. 이러한 도표는 편상관계수 도표가 아닙니다.  <p><span class="runinhead">수직축 변수</span> 하나 이상의 척도 수준 종속변수를
+  선택하십시오. 각각은 수평축 변수 각각에 대해 도표화됩니다. 종속변수
+  외에도 이는 회귀 잔차를 저장하고 회귀의 적합도를 평가하기 위해 여기에서
+  이러한 변수를 사용하는 데 유용할 수 있습니다.</p>
+
+  <p><span class="runinhead">수평축 변수</span>
+  도표화할 하나 이상의 변수를 선택하십시오. 변수에 척도 측정 수준이 있으면
+  그래프가 산점도 방식이 됩니다. 범주형의 경우 그래프가 막대도표, 선도표 또는
+  상자도표입니다.</p>
+
+  <p>다음 제어는 포인트에만 적용됩니다.</p>
+
+  <p><span class="runinhead">색상 기준</span> 산점도 색상 지정을 위해 집단 변수를
+  선택하십시오. 이는 척도 또는 범주형일 수 있습니다.</p>
+
+  <p><span class="runinhead">크기 기준</span> 산점도에서 포인트의 크기를 결정하는 데 사용할
+  범주형 또는 척도변수를 선택하십시오. 회귀분석에서 레버리지 또는 영향 변수를
+  선택하는 데 유용할 수 있습니다.</p>
+
+  <p><span class="runinhead">형태 기준</span> 산점도에서 포인트의 형태를 결정하려면
+  범주형 변수를 선택하십시오.</p>
+
+  <p><span class="runinhead">레이블 기준</span> 산점도 또는 상자도표에서 포인트를
+  레이블 지정하려면 변수를 선택하십시오.</p>
+
+  <h2>옵션</h2>
+
+  <p><span class="runinhead">도표 제목</span> 도표의 제목을
+  입력하십시오. 제목은 상자도표 경계 없이 부분화되지 않은 도표에만
+  표시됩니다. 또한 도표와 함께 설정 표에도 표시됩니다.</p>
+
+  <p><span class="runinhead">산점도 회귀선 적합</span> 회귀선 적합은 선형, 2차, 3차 또는 Loess 중 하나 이상이
+  될 수 있습니다. 각 유형은 다른 선 패턴을 사용합니다.</p>
+
+  <p><span class="runinhead">집단화</span> 회귀선 적합은 모든 포인트에 대해 함께 수행되거나
+  범주형 색상 변수가 있는 경우 각 집단에 대해 별도의 선이 있을 수 있습니다.</p>
+
+  <p><span class="runinhead">범주형 변수 도표</span>
+  범주형 변수 도표는 평균의 막대도표, 평균의 선도표 또는 상자도표일 수
+  있습니다.</p>
+
+  <p><span class="runinhead">산점도의 포인트 구간화</span>
+  포인트를 구간으로 집단화하려면 이 상자를 선택하십시오. 이는
+  포인트 수가 많거나 분리된 포인트에 초점을 맞추려는 경우 특히
+  유용합니다.</p>
+
+  <p><span class="runinhead">산점도에 대해 경계화된 상자도표</span> 도표가 부분화되지 않은 경우
+  각 산점도의 수직 및 수평 변수에 대한 상자도표를 포함하려면
+  이 상자를 선택하십시오.</p>
+
+  <p><span class="runinhead">도표 레이아웃 매개변수</span> 기본적으로 각 도표는
+  별도입니다. 부분화할 도표 수를 지정할 수 있습니다. 도표가 부분화되면
+  범례 및 경계 상자도표는 표시되지 않지만 범례 정보는
+  설정 표에 표시됩니다.</p>
+
+  <p><span class="runinhead">페이지 크기</span> 도표의 크기를 변경하려면 수직 및 수평
+  페이지 크기 값을 입력하십시오. 부분화된 도표의 행은 크기 조정 시에 한 도표로
+  계수합니다. 둘 중 하나가 제공될 경우 수집 및 수평 크기를 둘 다
+  지정해야 합니다. 측도는 인치입니다.</p>
+
+  <p><span class="runinhead">행별 다중 도표의 매개변수</span> 도표 레이블 또는 범례가 클 경우
+  기본 설정과 함께 클립되거나 다른 도표로 이동될 수 있습니다. 이러한 매개변수는
+  이 동작을 개선하는 데 사용할 수 있습니다. 값은 퍼센트입니다.</p>
+
+  <h2>추가 기능</h2>
+
+  <p>이 대화 상자는 STATS REGRESS PLOT 확장 명령에 대한 구문을
+  생성합니다. 이 명령에 대한 도움말을 표시하려면 다음 구문을 실행하십시오.</p>
+
+  <p class="codeblock">STATS REGRESS PLOT /HELP.</p>
+
+  <h2>요구 사항</h2>이 명령문은 Python Essentials 및
+  STATS REGRESS PLOT 확장 명령문이 필요합니다. SPSS Community(www.ibm.com/developerworks/spssdevcentral)에서
+  다운로드할 수 있습니다.<br>
+  <hr>
+  <p style="font-size:80%;">
+  © Copyright IBM Corp. 1989, 2013</p>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Extension xmlns="http://spss.com/clementine/extensions" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" debug="false" version="1.0" xsi:schemaLocation="http://spss.com/clementine/extensions http://xml.spss.com/clementine/extensions/CLEFSpecificationFile.xsd">
+	<ExtensionDetails copyright="Licensed Materials - Property of IBM.  IBM SPSS Products: Statistics Common (C) Copyright IBM Corp. 1989, 2013.  US Government Users Restricted Rights - Use, duplication or  disclosure restricted by GSA ADP Schedule Contract with IBM Corp." description="" id="STATS_REGRESS_PLOT" label="" provider="SPSS, Inc." providerTag="spss" version="1.0"/>
+	<Resources>
+		<Bundle id="bundle1" path="STATS_REGRESS_PLOT" type="properties"/>
+	</Resources>
+	<CommonObjects>
+		<Actions>
+			<Action id="STATS_REGRESS_PLOT_action" imagePath="IBMdialogicon.png" label="Regression Variable Plots" labelKey="STATS_REGRESS_PLOT_action.LABEL"/>
+		</Actions>
+	</CommonObjects>
+	<UserInterface>
+		<Controls>
+			<MenuItem action="STATS_REGRESS_PLOT_action" offset="3" showIcon="true" spssMenu="Graphs"/>
+		</Controls>
+	</UserInterface>
+	<Node id="STATS_REGRESS_PLOT" label="Regression Variable Plots" labelKey="STATS_REGRESS_PLOT.LABEL" type="modelBuilder">
+		<Properties>
+			<Property name="STATS_REGRESS_PLOT" syntax="STATS REGRESS PLOT %%yvars%% %%xvars%% %%color%% %%size%% %%shape%% %%label%%&#10;/OPTIONS %%catplots%% %%title%% %%across%% %%boxplots%% %%hexbin%% %%indent%% %%yscale%% %%pagey%% %%pagex%%&#10;/FITLINES %%linear%% %%quadratic%% %%cubic%% %%lowesss%% %%fitgrouping%%&#10;&#10;"/>
+			<Property description="false" name="STATS_REGRESS_PLOT_modal"/>
+			<Property description="" descriptionKey="source_vars_tooltip.LABEL" isList="true" label="Variables:" labelKey="source_vars.LABEL" name="source_vars" selectionPool="source_fields" syntax="%%ThisValue%%" valueType="field"/>
+			<Property description="Each y variable will be plotted against each x variable" descriptionKey="yvars_tooltip.LABEL" isList="true" isRequired="true" label="Vertical-Axis Variables:" labelKey="yvars.LABEL" name="yvars" selectionPool="source_fields" syntax="YVARS=%%ThisValue%%" valueType="field"/>
+			<Property description="Scale variables produce scatterplots.  Categorical variables produce bar,line, or boxplot charts" descriptionKey="xvars_tooltip.LABEL" isList="true" isRequired="true" label="Horizontal-Axis Variables:" labelKey="xvars.LABEL" name="xvars" selectionPool="source_fields" syntax="XVARS=%%ThisValue%%" valueType="field"/>
+			<Property description="Label variable for points" descriptionKey="label_tooltip.LABEL" isList="true" label="Label by:" labelKey="label.LABEL" name="label" selectionPool="source_fields" syntax="LABEL=%%ThisValue%%" valueType="field"/>
+			<Property description="Color points  by this variable.  Applies to scatters and boxplots" descriptionKey="color_tooltip.LABEL" isList="true" label="Color by:" labelKey="color.LABEL" name="color" selectionPool="source_fields" syntax="COLOR=%%ThisValue%%" valueType="field"/>
+			<Property description="for lines or bars, shape controls the dash pattern only" descriptionKey="shape_tooltip.LABEL" isList="true" label="Shape by:" labelKey="shape.LABEL" name="shape" selectionPool="source_fields" syntax="SHAPE=%%ThisValue%%" valueType="field"/>
+			<Property description="Scale point size.  Applies only to scatterplots" descriptionKey="size_tooltip.LABEL" isList="true" label="Size by:" labelKey="size.LABEL" name="size" selectionPool="source_fields" syntax="SIZE=%%ThisValue%%" valueType="field"/>
+			<Property defaultValue="" description="Title is omitted if there is more than one group" descriptionKey="title_tooltip.LABEL" label="Chart Title:" labelKey="title.LABEL" name="title" syntax="TITLE=&quot;%%ThisValue%%&quot;" valueType="string"/>
+			<Property defaultValue="bar" description="" descriptionKey="catplots_tooltip.LABEL" label="Categorical Variable Plots" labelKey="catplots.LABEL" name="catplots" syntax="CATEGORICAL=%%ThisValue%%" valueType="enum">
+				<Enumeration>
+					<Enum description="" descriptionKey="bar_tooltip.LABEL" hasSubGroup="false" label="Bar charts of means" labelKey="bar.LABEL" mnemonic="B" mnemonicKey="bar_mnemonic.VALUE" syntax="BARS" value="bar"/>
+					<Enum description="" descriptionKey="line_tooltip.LABEL" hasSubGroup="false" label="Line charts of means" labelKey="line.LABEL" mnemonic="E" mnemonicKey="line_mnemonic.VALUE" syntax="LINES" value="line"/>
+					<Enum description="" descriptionKey="boxplot_tooltip.LABEL" hasSubGroup="false" label="Boxplots" labelKey="boxplot.LABEL" mnemonic="T" mnemonicKey="boxplot_mnemonic.VALUE" syntax="BOXPLOT" value="boxplot"/>
+				</Enumeration>
+			</Property>
+			<Property description="" descriptionKey="fitlinestroup_tooltip.LABEL" label="Scatterplot Fit Lines" labelKey="fitlinestroup.LABEL" name="fitlinestroup" syntax="%%ThisValue%%"/>
+			<Property defaultValue="false" description="Straight line fit" descriptionKey="linear_tooltip.LABEL" label="Linear" labelKey="linear.LABEL" name="linear" syntax="LINEAR±" valueType="boolean"/>
+			<Property defaultValue="false" description="Quadratic fit" descriptionKey="quadratic_tooltip.LABEL" label="Quadratic" labelKey="quadratic.LABEL" name="quadratic" syntax="QUADRATIC±" valueType="boolean"/>
+			<Property defaultValue="false" description="Cubic fit" descriptionKey="cubic_tooltip.LABEL" label="Cubic" labelKey="cubic.LABEL" name="cubic" syntax="CUBIC±" valueType="boolean"/>
+			<Property defaultValue="false" description="Lowess smooth of points" descriptionKey="lowesss_tooltip.LABEL" label="LOESS" labelKey="lowesss.LABEL" name="lowesss" syntax="LOESS±" valueType="boolean"/>
+			<Property defaultValue="fittotal" description="" descriptionKey="fitgrouping_tooltip.LABEL" label="Grouping" labelKey="fitgrouping.LABEL" name="fitgrouping" syntax="APPLYTO=%%ThisValue%%" valueType="enum">
+				<Enumeration>
+					<Enum description="One fit line for each fit type" descriptionKey="fittotal_tooltip.LABEL" hasSubGroup="false" label="Fit line at total" labelKey="fittotal.LABEL" mnemonic="F" mnemonicKey="fittotal_mnemonic.VALUE" syntax="TOTAL" value="fittotal"/>
+					<Enum description="If there are groups, fit a separate line for each one" descriptionKey="fitgroup_tooltip.LABEL" hasSubGroup="false" label="Fit line for each categorical color group" labelKey="fitgroup.LABEL" mnemonic="C" mnemonicKey="fitgroup_mnemonic.VALUE" syntax="GROUP" value="fitgroup"/>
+				</Enumeration>
+			</Property>
+			<Property description="" descriptionKey="layout_tooltip.LABEL" label="Chart Layout Parameters" labelKey="layout.LABEL" name="layout" syntax="%%ThisValue%%"/>
+			<Property defaultValue="1" description="Up to this number of charts will appear in each row of output" descriptionKey="across_tooltip.LABEL" label="Number of Charts Per Row:" labelKey="across.LABEL" max="10" min="1" name="across" syntax="GROUP=%%ThisValue%%" valueType="integer"/>
+			<Property defaultValue="" description="Vertical size of the entire chart in inches" descriptionKey="pagey_tooltip.LABEL" label="Vertical Page Size (inches)" labelKey="pagey.LABEL" max="15.000000" min="1.000000" name="pagey" syntax="PAGEY=%%ThisValue%%" valueType="double"/>
+			<Property defaultValue="" description="Horizontal size of of group of  charts in inches" descriptionKey="pagex_tooltip.LABEL" label="Horizontal Page Size (inches)" labelKey="pagex.LABEL" max="15.000000" min="1.000000" name="pagex" syntax="PAGEX=%%ThisValue%%" valueType="double"/>
+			<Property defaultValue="15" description="" descriptionKey="indent_tooltip.LABEL" label="Indentation of First Chart (%)" labelKey="indent.LABEL" max="50" min="0" name="indent" syntax="INDENT=%%ThisValue%%" valueType="integer"/>
+			<Property defaultValue="75" description="" descriptionKey="yscale_tooltip.LABEL" label="Y-Dimension Scaling (%)" labelKey="yscale.LABEL" max="100" min="50" name="yscale" syntax="YSCALE=%%ThisValue%%" valueType="integer"/>
+			<Property defaultValue="true" description="Display boxplots on the borders of scatterplots" descriptionKey="boxplots_tooltip.LABEL" label="Bordered boxplots for scatterplots if one per row" labelKey="boxplots.LABEL" name="boxplots" syntax="BOXPLOTS±" valueType="boolean"/>
+			<Property defaultValue="false" description="Binning produces a less cluttered display when there are many points" descriptionKey="hexbin_tooltip.LABEL" label="Bin points in scatterplots" labelKey="hexbin.LABEL" name="hexbin" syntax="HEXBIN±" valueType="boolean"/>
+		</Properties>
+		<SelectionPool id="source_fields" type="fields"/>
+		<UserInterface>
+			<Tabs>
+				<Tab helpLink="STATS_REGRESS_PLOT.htm">
+					<PropertiesPanel>
+						<SourceFieldsBrowser copyFields="true" mnemonic="V" mnemonicKey="source_vars_mnemonic.VALUE" property="source_vars" selectionPool="source_fields" storage="[real integer date time string]">
+							<Layout columnWeight="1.0" fill="both" gridColumn="0" gridRow="1" gridWidth="1" rowWeight="1.0"/>
+						</SourceFieldsBrowser>
+						<MultiFieldChooserControl mnemonic="V" mnemonicKey="yvars_mnemonic.VALUE" property="yvars" storage="[real integer date time]" types="[range]">
+							<Layout columnWeight="1.0" fill="both" gridColumn="2" gridRow="0" gridWidth="1" rowWeight="1.0"/>
+						</MultiFieldChooserControl>
+						<MultiFieldChooserControl mnemonic="H" mnemonicKey="xvars_mnemonic.VALUE" property="xvars" storage="[real integer date time string]">
+							<Layout columnWeight="1.0" fill="both" gridColumn="2" gridRow="1" gridWidth="1" rowWeight="1.0"/>
+						</MultiFieldChooserControl>
+						<SingleFieldChooserControl mnemonic="L" mnemonicKey="label_mnemonic.VALUE" property="label" storage="[real integer date time string]">
+							<Layout columnWeight="1.0" fill="horizontal" gridColumn="2" gridRow="6" gridWidth="1" rowWeight="0.0"/>
+						</SingleFieldChooserControl>
+						<SingleFieldChooserControl mnemonic="C" mnemonicKey="color_mnemonic.VALUE" property="color" storage="[real integer date time string]">
+							<Layout columnWeight="1.0" fill="horizontal" gridColumn="2" gridRow="3" gridWidth="1" rowWeight="0.0"/>
+						</SingleFieldChooserControl>
+						<SingleFieldChooserControl mnemonic="S" mnemonicKey="shape_mnemonic.VALUE" property="shape" storage="[real integer date time string]" types="[set orderedSet]">
+							<Layout columnWeight="1.0" fill="horizontal" gridColumn="2" gridRow="5" gridWidth="1" rowWeight="0.0"/>
+						</SingleFieldChooserControl>
+						<SingleFieldChooserControl mnemonic="B" mnemonicKey="size_mnemonic.VALUE" property="size" storage="[real integer date time string]">
+							<Layout columnWeight="1.0" fill="horizontal" gridColumn="2" gridRow="4" gridWidth="1" rowWeight="0.0"/>
+						</SingleFieldChooserControl>
+						<PropertiesSubPanel buttonLabel="Options..." buttonLabelKey="options.LABEL" dialogTitle="Options..." dialogTitleKey="Options.TITLE" helpLink="" mnemonic="O" mnemonicKey="options_mnemonic.VALUE">
+							<Layout columnWeight="0.0" fill="none" gridColumn="3" gridRow="0" gridWidth="1" rowWeight="0.0"/>
+							<PropertiesPanel>
+								<TextBoxControl mnemonic="H" mnemonicKey="title_mnemonic.VALUE" property="title">
+									<Layout columnWeight="1.0" fill="horizontal" gridColumn="0" gridRow="0" gridWidth="1" rowWeight="0.0"/>
+								</TextBoxControl>
+								<RadioButtonGroupControl property="catplots" rows="3" useSubPanel="false">
+									<Layout columnWeight="1.0" fill="both" gridColumn="0" gridRow="2" gridWidth="1" rowWeight="1.0"/>
+									<RadioButton property="bar"/>
+									<RadioButton property="line"/>
+									<RadioButton property="boxplot"/>
+								</RadioButtonGroupControl>
+								<PropertiesPanel id="fitlinestroup" label="Scatterplot Fit Lines" labelKey="fitlinestroup.LABEL">
+									<Layout columnWeight="1.0" fill="both" gridColumn="0" gridRow="1" gridWidth="1" rowWeight="1.0"/>
+									<CheckBoxControl mnemonic="L" mnemonicKey="linear_mnemonic.VALUE" property="linear">
+										<Layout columnWeight="1.0" fill="none" gridColumn="0" gridRow="0" gridWidth="1" rowWeight="0.0"/>
+									</CheckBoxControl>
+									<CheckBoxControl mnemonic="Q" mnemonicKey="quadratic_mnemonic.VALUE" property="quadratic">
+										<Layout columnWeight="1.0" fill="none" gridColumn="0" gridRow="1" gridWidth="1" rowWeight="0.0"/>
+									</CheckBoxControl>
+									<CheckBoxControl mnemonic="U" mnemonicKey="cubic_mnemonic.VALUE" property="cubic">
+										<Layout columnWeight="1.0" fill="none" gridColumn="0" gridRow="2" gridWidth="1" rowWeight="0.0"/>
+									</CheckBoxControl>
+									<CheckBoxControl mnemonic="O" mnemonicKey="lowesss_mnemonic.VALUE" property="lowesss">
+										<Layout columnWeight="1.0" fill="none" gridColumn="0" gridRow="3" gridWidth="1" rowWeight="0.0"/>
+									</CheckBoxControl>
+									<RadioButtonGroupControl property="fitgrouping" rows="2" useSubPanel="false">
+										<Layout columnWeight="1.0" fill="both" gridColumn="0" gridRow="4" gridWidth="1" rowWeight="1.0"/>
+										<RadioButton property="fittotal"/>
+										<RadioButton property="fitgroup"/>
+									</RadioButtonGroupControl>
+								</PropertiesPanel>
+								<PropertiesPanel id="layout" label="Chart Layout Parameters" labelKey="layout.LABEL">
+									<Layout columnWeight="1.0" fill="both" gridColumn="1" gridRow="2" gridWidth="1" rowWeight="1.0"/>
+									<TextBoxControl mnemonic="N" mnemonicKey="across_mnemonic.VALUE" property="across">
+										<Layout columnWeight="1.0" fill="horizontal" gridColumn="0" gridRow="0" gridWidth="1" rowWeight="0.0"/>
+									</TextBoxControl>
+									<TextBoxControl mnemonic="V" mnemonicKey="pagey_mnemonic.VALUE" property="pagey">
+										<Layout columnWeight="1.0" fill="horizontal" gridColumn="0" gridRow="1" gridWidth="1" rowWeight="0.0"/>
+									</TextBoxControl>
+									<TextBoxControl mnemonic="H" mnemonicKey="pagex_mnemonic.VALUE" property="pagex">
+										<Layout columnWeight="1.0" fill="horizontal" gridColumn="0" gridRow="2" gridWidth="1" rowWeight="0.0"/>
+									</TextBoxControl>
+									<StaticText text="Parameters for Multiple Charts Per Row" textKey="item_36.LABEL">
+										<Layout columnWeight="1.0" fill="none" gridColumn="0" gridRow="3" gridWidth="1" rowWeight="0.0"/>
+									</StaticText>
+									<TextBoxControl mnemonic="D" mnemonicKey="indent_mnemonic.VALUE" property="indent">
+										<Layout columnWeight="1.0" fill="horizontal" gridColumn="0" gridRow="4" gridWidth="1" rowWeight="0.0"/>
+									</TextBoxControl>
+									<TextBoxControl mnemonic="S" mnemonicKey="yscale_mnemonic.VALUE" property="yscale">
+										<Layout columnWeight="1.0" fill="horizontal" gridColumn="0" gridRow="5" gridWidth="1" rowWeight="1.0"/>
+									</TextBoxControl>
+								</PropertiesPanel>
+								<CheckBoxControl mnemonic="P" mnemonicKey="boxplots_mnemonic.VALUE" property="boxplots">
+									<Layout columnWeight="1.0" fill="none" gridColumn="1" gridRow="1" gridWidth="1" rowWeight="0.0"/>
+								</CheckBoxControl>
+								<CheckBoxControl mnemonic="A" mnemonicKey="hexbin_mnemonic.VALUE" property="hexbin">
+									<Layout columnWeight="1.0" fill="none" gridColumn="1" gridRow="0" gridWidth="1" rowWeight="0.0"/>
+								</CheckBoxControl>
+							</PropertiesPanel>
+						</PropertiesSubPanel>
+						<StaticText text="Use this dialog to plot each vertical-axis variable\nagainst each horizontal axis variable.\nFor categorical variables, bar,\nline, or boxplot charts are produced." textKey="item_18.LABEL">
+							<Layout columnWeight="1.0" fill="none" gridColumn="0" gridRow="0" gridWidth="1" rowWeight="0.0"/>
+						</StaticText>
+						<StaticText text="Specifications below apply only\nto charts for continuous predictors\nexcept Label also applies to boxplots" textKey="item_676.LABEL">
+							<Layout columnWeight="1.0" fill="none" gridColumn="2" gridRow="2" gridWidth="1" rowWeight="0.0"/>
+						</StaticText>
+						<StaticText text="This dialog requires the Python Essentials" textKey="item_69.LABEL">
+							<Layout columnWeight="1.0" fill="none" gridColumn="0" gridRow="2" gridWidth="1" rowWeight="0.0"/>
+						</StaticText>
+						<StaticText text="This dialog was created using a later version of PASW Statistics\nand certain features may not function as intended." textKey="v17_warning.LABEL">
+							<Layout columnWeight="1.0" fill="horizontal" gridColumn="0" gridRow="3" gridWidth="1" rowWeight="1.0"/>
+						</StaticText>
+					</PropertiesPanel>
+				</Tab>
+			</Tabs>
+		</UserInterface>
+	</Node>
+</Extension>

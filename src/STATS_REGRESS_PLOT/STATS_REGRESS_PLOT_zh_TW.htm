@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>實用於迴歸關係的圖形</title>
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+  </style>
+</head>
+
+<body>
+  <h1>實用於迴歸關係的圖形</h1>此指令顯示可能用於評估一個以上依變數與一組說明變數之間迴歸類型關係的一組圖形，雖然其不限於此用途。這些圖表並非局部圖形。<p><span class="runinhead">垂直軸變數</span> 選取一個以上層級依變數。每個垂直軸變數將對應到水平軸變數。除了依變數，其可能用以儲存迴歸殘差，並使用這些變數以評估迴歸的適足性。</p>
+
+  <p><span class="runinhead">水平軸變數</span>
+  選取要對應的一個以上變數。如果變數有尺度測量層次，圖形將為散點圖。如果其為種類，圖形將為長條圖、折線圖或盒形圖。</p>
+
+  <p>下列控制只能套用至點。</p>
+
+  <p><span class="runinhead">顏色依據</span> 選擇散佈圖點填色所依據的分組變數。其可為尺度或種類。</p>
+
+  <p><span class="runinhead">大小依據</span> 選擇種類或尺度變數，以用於決定散點圖中的點大小。其可能用以從這裡的迴歸選擇利用或影響變數。</p>
+
+  <p><span class="runinhead">形狀依據</span> 選擇種類變數以決定散佈圖中點的形狀。</p>
+
+  <p><span class="runinhead">標示依據</span> 選擇變數以標示散點圖或盒形圖中的點。</p>
+
+  <h2>選項</h2>
+
+  <p><span class="runinhead">圖表標題</span> 輸入圖表的標題。標題只會顯示不含邊界盒形圖的未鑲嵌圖表。其也會顯示於圖表隨附的「設定」表格。</p>
+
+  <p><span class="runinhead">散點圖配適線條</span> 配適線條可以是一條以上線性、二次曲線、三次曲線或 Loess 的線條。每種類型使用不同的線條型樣。</p>
+
+  <p><span class="runinhead">分組</span> 可為所有點配適線條，如果存在種類顏色變數，則可能存在每組的分隔線。</p>
+
+  <p><span class="runinhead">種類變數圖</span> 種類水平圖可為平均數長條圖、平均數折線圖或盒形圖。</p>
+
+  <p><span class="runinhead">散點圖中的歸類空間點</span>
+  勾選此方框以將點分組在歸類空間中。如果有許多點或您想要著重於孤立點，此功能特別實用。</p>
+
+  <p><span class="runinhead">將盒形圖置於散點圖邊界</span> 如果圖表未鑲嵌，請選取此方框以在每張散點圖中包含垂直和水平變數的盒形圖。</p>
+
+  <p><span class="runinhead">圖表佈置參數</span> 依預設，每個圖表是單獨的。您可以指定要鑲嵌的圖表數。如果圖表已鑲嵌，不會顯示圖註和邊界盒形圖，但圖註資訊會顯示於設定表格中。</p>
+
+  <p><span class="runinhead">頁面大小</span> 輸入垂直和水平頁面大小值，以變更圖表的大小。計算大小時，同一列的鑲嵌圖表會計為一張圖表。如果給定任一邊的大小，必須指定垂直和水平大小。測量以英吋為單位。</p>
+
+  <p><span class="runinhead">每列多張圖表的參數</span> 如果圖表標籤或圖註很大，根據預設值，它們可能會被裁剪，或溢出至其他圖表。這些參數可用以改善此行為。值以百分比為單位。</p>
+
+  <h2>其他特性</h2>
+
+  <p>此對話框會產生適用於 STATS REGRESS PLOT 延伸指令的語法。若要顯示此指令的說明，請執行下列語法：
+
+  </p>
+
+  <p class="codeblock">STATS REGRESS PLOT /HELP.</p>
+
+  <h2>需求</h2>此指令需要 Python Essentials 和 STATS REGRESS PLOT 延伸指令。您可以從 SPSS 社群 (www.ibm.com/developerworks/spssdevcentral) 下載這些指令。<br>
+  <hr>
+  <p style="font-size:80%;">
+  © Copyright IBM Corp. 1989, 2013</p>
+</body>
+</html>

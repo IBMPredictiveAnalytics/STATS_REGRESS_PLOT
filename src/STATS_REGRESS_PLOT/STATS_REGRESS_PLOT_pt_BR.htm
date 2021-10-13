@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Gráficos Úteis para Relacionamentos de Regressão</title>
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+  </style>
+</head>
+
+<body>
+  <h1>Gráficos Úteis para Relacionamentos de Regressão</h1>Esse comando exibe um conjunto de gráficos que podem ser úteis para avaliar os relacionamentos do tipo de regressão entre uma ou mais variáveis dependentes e um conjunto de variáveis explicativas, apesar de não estarem limitadas a esse uso. Esses gráficos não são gráficos parciais.
+
+  <p><span class="runinhead">Variáveis de Eixo Vertical</span> Selecione   uma ou mais variáveis dependentes em nível de escala. Cada uma será plotada com relação a cada uma das variáveis do eixo horizontal. Além das variáveis dependentes, pode ser útil salvar os resíduos da regressão e usar essas variáveis aqui para avaliar a adequação da regressão.</p>
+
+  <p><span class="runinhead">Variáveis de Eixo Horizontal</span>   Selecione uma ou mais variáveis com relação às quais criar gráfico. Se uma variável tiver um nível de medição de escala, o gráfico será de dispersão.
+  Se for categórico, o gráfico será de barras, de linhas ou boxplot.</p>
+
+  <p>Os seguintes controles aplicam-se apenas a pontos.</p>
+
+  <p><span class="runinhead">Colorir por</span> Escolha uma   variável de agrupamento de acordo com a qual colorirá os   pontos do gráfico de dispersão. Pode ser de escala ou categórica.</p>
+
+  <p><span class="runinhead">Dimensionar por</span> Escolha uma   variável de escala ou categórica para usar para determinar o   tamanho dos pontos em um gráfico de dispersão. Pode ser útil escolher uma variável de influência ou alavanca de uma regressão aqui.</p>
+
+  <p><span class="runinhead">Formatar por</span> Escolha uma   variável categórica para determinar o formato dos pontos em   um gráfico de dispersão.</p>
+
+  <p><span class="runinhead">Rotular por</span> Escolha uma variável   para rotular pontos em um gráfico de dispersão ou boxplot.</p>
+
+  <h2>Opções</h2>
+
+  <p><span class="runinhead">Título do Gráfico</span> Insira um título   para os gráficos. O título será exibido apenas para gráficos sem painéis e sem boxplots ao redor. Também aparece na tabela Configurações que acompanha os gráficos.</p>
+
+  <p><span class="runinhead">Linhas de Ajuste do Gráfico de Dispersão</span>   As linhas de ajuste podem ser uma ou mais de linear, quadrática, cúbica ou loesse. Cada tipo usa um padrão de linha diferente.</p>
+
+  <p><span class="runinhead">Agrupamento</span> Linhas de ajuste podem   ser para todos os pontos juntos ou, se houver uma variável de cor   categórica, poderá haver linhas separadas para cada grupo.</p>
+
+  <p><span class="runinhead">Gráficos de Variável Categórica</span>   Gráficos horizontais categóricos podem ser gráficos de barras de   médias, gráficos de linha de média ou  boxplots.</p>
+
+  <p><span class="runinhead">Categorizar Pontos em Gráficos de Dispersão</span>   Marque esta caixa para agrupar pontos em categorias. Isso pode ser particularmente útil se houver muitos pontos ou se você desejar focar em pontos isolados.</p>
+
+  <p><span class="runinhead">Boxplots com Bordas para Gráficos de Dispersão</span> Se os gráficos não tiverem painéis, marque esta caixa para incluir boxplots para as variáveis verticais e horizontais em cada gráfico de dispersão.</p>
+
+  <p><span class="runinhead">Parâmetros de Layout do Gráfico</span> Por   padrão, cada gráfico é separado. Você pode especificar o número de gráficos através dos quais fazer um painel. Se os gráficos estiverem em painel, as legendas e boxplots ao redor não são exibidos, mas as informações de legenda aparecem na tabela de configurações.</p>
+
+  <p><span class="runinhead">Tamanho da Página</span> Insira valores de tamanho de página verticais e horizontais para alterar o tamanho de um gráfico. Uma linha de gráficos em painel conta como um gráfico no dimensionamento. Os tamanhos vertical e horizontal devem ser especificados se qualquer um deles for fornecido.
+  As medidas são em polegadas.</p>
+
+  <p><span class="runinhead">Parâmetros para vários Gráficos por   Linha</span> Se as legendas ou os rótulos do gráfico forem grandes,   eles poderão ser recortados ou se estender até outro gráfico com   as configurações padrão. Esses parâmetros podem ser usados para melhorar esse comportamento.
+  Os valores são em percentagem.</p>
+
+  <h2>Recursos adicionais</h2>
+
+  <p>Esta caixa de diálogo gera sintaxe para o comando de extensão STATS REGRESS PLOT. Para exibir ajuda para este comando, execute a seguinte sintaxe:</p>
+
+  <p class="codeblock">STATS REGRESS PLOT /HELP.</p>
+
+  <h2>Requisitos</h2>Esse comando requer o Python Essentials e o comando de extensão STATS REGRESS PLOT. Você pode fazer o download deles na SPSS Community em www.ibm.com/developerworks/spssdevcentral.<br>
+  <hr>
+  <p style="font-size:80%;">
+  © Copyright IBM Corp. 1989, 2013</p>
+</body>
+</html>

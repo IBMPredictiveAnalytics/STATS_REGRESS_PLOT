@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <title>回帰関係に役に立つプロット</title>
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+  </style>
+</head>
+
+<body>
+  <h1>回帰関係に役に立つプロット</h1>このコマンドは、1 つ以上の従属変数と説明変数のセットの間の回帰タイプ関係の評価に役に立つ可能性があるプロットのセットを表示します。ただし、これらのプロットの使用はこれに限定される訳ではありません。
+これらの図表は部分プロットではありません。
+
+  <p><span class="runinhead">縦軸の変数:</span> 1 つ以上のスケール レベルの従属変数を選択します。
+各変数は横軸変数それぞれに対してプロットされます。従属変数のほかに、回帰の残差を保存しておいてそれらの変数をここで使用すると、
+回帰の妥当性を評価するのに役立つ場合があります。</p>
+
+  <p><span class="runinhead">横軸変数:</span>
+  プロットの対象とする 1 つ以上の変数を選択します。変数がスケール型の測定の尺度を持つ場合、
+グラフは散布図になります。変数がカテゴリ型の場合、グラフは棒グラフ、折れ線グラフ、または箱ひげ図になります。</p>
+
+  <p>以下のコントロールはポイントにのみ適用されます。</p>
+
+  <p><span class="runinhead">色指定:</span> 散布図のポイントに色を付けるためのグループ化変数を選択します。
+スケール型またはカテゴリ型を選択できます。</p>
+
+  <p><span class="runinhead">サイズ指定:</span> 散布図のポイントのサイズを決定するために使用する
+カテゴリ変数またはスケール変数を選択します。ここで回帰からてこ比または影響度変数を選択すると便利な場合があります。</p>
+
+  <p><span class="runinhead">形状指定:</span> 散布図のポイントの形状を決定するためのカテゴリ変数を選択します。</p>
+
+  <p><span class="runinhead">ラベル指定:</span> 散布図または箱ひげ図のポイントにラベルを付けるための変数を選択します。</p>
+
+  <h2>オプション</h2>
+
+  <p><span class="runinhead">図表の表題:</span> 図表の表題を入力します。表題は、枠線箱ひげ図のないパネル化されていない図表でのみ表示されます。また、図表に付随する「設定」テーブルにも表示されます。</p>
+
+  <p><span class="runinhead">散布図の線の当てはめ:</span> 線の当てはめは、線型、2 次、3 次、または局所的重み付け回帰平滑法の 1 つ以上を使用できます。
+各タイプで異なる線パターンが使用されます。</p>
+
+  <p><span class="runinhead">グループ化:</span> 線の当てはめは、すべてのポイントをまとめたものにするか、カテゴリの色が使用可能な場合は、グループごとに個別の線にすることができます。</p>
+
+  <p><span class="runinhead">カテゴリ変数プロット:</span>
+カテゴリの水平プロットは、平均の棒グラフ、平均の折れ線グラフ、または箱ひげ図を使用できます。</p>
+
+  <p><span class="runinhead">散布図のポイントのビン分割:</span>
+  ポイントをビンにグループ化するにはこのボックスにチェック マークを付けます。これは、多数のポイントがある場合、または分離されたポイントにフォーカスする場合に特に役に立ちます。</p>
+
+  <p><span class="runinhead">散布図の枠付き箱ひげ図:</span> 図表がパネル化されていない場合、このボックスにチェック マークを付けると、各散布図の垂直変数と水平変数の箱ひげ図が含められます。</p>
+
+  <p><span class="runinhead">図表レイアウト パラメータ:</span> デフォルトでは、各図表は分離しています。
+パネル化して並べる図表の数を指定することができます。図表がパネル化されると、凡例と枠付き箱ひげ図は表示されませんが、凡例情報は設定テーブル内に表示されます。</p>
+
+  <p><span class="runinhead">ページ サイズ:</span> 垂直と水平のページ サイズの値を入力して、図表のサイズを変更します。
+パネル化された図表の行は、サイズ変更の際は 1 つの図表としてカウントされます。垂直サイズまたは水平サイズのいずれかを指定した場合は、もう一方も指定する必要があります。単位はインチです。</p>
+
+  <p><span class="runinhead">1 行内の複数図表用のパラメータ:</span> 図表のラベルまたは凡例が大きい場合、デフォルトの設定では切れてしまったり、別の図表にはみ出す場合があります。これらのパラメータを使用して、この動作を改善できます。値はパーセントです。</p>
+
+  <h2>その他の機能</h2>
+
+  <p>このダイアログは、STATS REGRESS PLOT 拡張コマンドのシンタックスを生成します。このコマンドのヘルプを表示するには、次のシンタックスを実行します。</p>
+
+  <p class="codeblock">STATS REGRESS PLOT /HELP</p>
+
+  <h2>要件</h2>このコマンドを使用するには、Python Essentials および STATS
+  REGRESS PLOT 拡張コマンドが必要です。SPSS コミュニティー www.ibm.com/developerworks/spssdevcentral からダウンロードできます。<br>
+  <hr>
+  <p style="font-size:80%;">
+  © Copyright IBM Corp. 1989, 2013</p>
+</body>
+</html>

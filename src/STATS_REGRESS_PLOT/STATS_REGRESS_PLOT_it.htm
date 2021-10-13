@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Grafici utili per le relazioni di regressione</title>
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+  </style>
+</head>
+
+<body>
+  <h1>Grafici utili per le relazioni di regressione</h1>Questo comando
+visualizza un insieme di grafici che possono essere utili nella valutazione delle relazioni di tipi regressione tra
+una o più variabili dipendenti e un insieme di variabili esplicative, ma è possibile utilizzarli anche per altri scopi. Non si tratta di grafici parziali.
+
+  <p><span class="runinhead">Variabili asse verticale</span> Selezionare una i più variabili dipendenti
+a livello di scala. Ciascuna variabile verrà tracciata rispetto a ognuna delle variabili asse orizzontale. Oltre
+alle variabili dipendenti, può essere utile salvare i residui di regressione e utilizzare tali variabili qui per
+valutare l'adeguatezza della regressione.</p>
+
+  <p><span class="runinhead">Variabili asse orizzontale</span>
+Selezionare una o più variabili con cui eseguire il confronto. Se una variabile ha un livello di misurazione della scala,
+il grafico sarà a dispersione.
+  Se è categoriale, il grafico sarà a barre, a linee o a scatole.</p>
+
+  <p>I seguenti controlli sono validi solo per i punti.</p>
+
+  <p><span class="runinhead">Colore per</span> Scegliere una variabile di raggruppamento
+in base alla quale colorare i punti del grafico a dispersione. Può essere di scala o categoriale.</p>
+
+  <p><span class="runinhead">Dimensione per</span> Scegliere una variabile categoriale o di scala da utilizzare
+per determinare la dimensione dei punti in un grafico a dispersione. Può essere utile scegliere qui una variabile leva o influenza da una regressione.</p>
+
+  <p><span class="runinhead">Forma per</span> Scegliere una variabile categoriale per determinare la forma dei punti in un grafico a dispersione.</p>
+
+  <p><span class="runinhead">Etichetta per</span> Scegliere una variabile per etichettare i punti in un grafico a dispersione o a scatole.</p>
+
+  <h2>Opzioni</h2>
+
+  <p><span class="runinhead">Titolo del grafico</span> Immettere un titolo per i grafici. Il
+titolo verrà visualizzato solo per i grafici senza pannello senza grafici a scatole senza bordi. Inoltre,
+verrà visualizzato nella tabella Impostazioni accanto ai grafici.</p>
+
+  <p><span class="runinhead">Curve di adattamento del grafico a dispersione</span> Le curve di adattamento
+possono essere una o più curve lineari, quadratiche, cubiche o loess. Ogni tipo utilizza
+un modello di linea diverso.</p>
+
+  <p><span class="runinhead">Raggruppamento</span> Le curve di adattamento possono essere per tutti i punti insieme o, se
+è presente una variabile colore categoriale, possono esservi curve separate per ogni gruppo.</p>
+
+  <p><span class="runinhead">Grafici delle variabili categoriali</span>
+I grafici orizzontali categoriali possono essere grafici a barre delle medie, grafici a linee delle medie o grafici a scatole.</p>
+
+  <p><span class="runinhead">Raccogli i punti nei grafici a dispersione</span>
+Selezionare questa casella per raggruppare i punti in contenitori. Ciò può essere particolarmente utile se esistono molti punti
+o se si desidera concentrare l'attenzione su punti isolati.</p>
+
+  <p><span class="runinhead">Grafici a scatole con bordi per i grafici a dispersione</span> Se i grafici
+non sono a pannelli, selezionare questa casella per includere i grafici a scatole per le variabili verticali e orizzontali in ogni grafico a dispersione.</p>
+
+  <p><span class="runinhead">Parametri di layout del grafico</span> Per impostazione predefinita, ogni grafico è separato dagli altri. È possibile
+specificare il numero di grafici da raggruppare in un pannello. Se i grafici sono a pannelli,
+le legende e i grafici a scatole con bordo non vengono visualizzati, ma le informazioni sulla legenda vengono
+visualizzate nella tabella di impostazioni.</p>
+
+  <p><span class="runinhead">Dimensione pagina</span> Immettere i valori di dimensione pagina verticale e orizzontale per
+modificare la dimensione di un grafico. Una riga di grafici a pannelli equivale a un grafico durante il dimensionamento. È
+necessario specificare sia la dimensione verticale che quella orizzontale, se ne viene fornita una.
+  Le misure sono espresse in pollici.</p>
+
+  <p><span class="runinhead">Parametri per più grafici per riga</span> Se le etichette o le legende del grafico sono grandi, è possibile
+ritagliarle o estenderle in un altro grafico con le impostazioni predefinite. Questi parametri
+possono essere utilizzati per migliorare questo funzionamento.
+  I valori sono espressi in percentuale.</p>
+
+  <h2>Funzioni aggiuntive</h2>
+
+  <p>Questa finestra di dialogo genera la sintassi per il comando di estensione STATS REGRESS PLOT. Per visualizzare la guida per questo comando, utilizzare la sintassi riportata di seguito:</p>
+
+  <p class="codeblock">STATS REGRESS PLOT /HELP.</p>
+
+  <h2>Requisiti</h2>Questa finestra di dialogo richiede Python Essentials e il comando di estensione STATS
+  REGRESS PLOT. È possibile scaricarli da SPSS Community all'indirizzo
+  www.ibm.com/developerworks/spssdevcentral.<br>
+  <hr>
+  <p style="font-size:80%;">
+  © Copyright IBM Corp. 1989, 2013</p>
+</body>
+</html>
