@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Gráficos útiles para las relaciones de regresión</title>
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+  </style>
+</head>
+
+<body>
+  <h1>Gráficos útiles para las relaciones de regresión</h1>Este comando   muestra un conjunto de gráficos que pueden resultar útiles para evaluar   las relaciones de los tipos de regresiones entre una o más variables   dependientes y un conjunto de variables explicatorias, aunque no se   limitan a este uso. Estos gráficos no son gráficos parciales.
+
+  <p><span class="runinhead">Variables del eje vertical</span> Seleccione   una o más variables dependientes a nivel de escala. Cada una se trazará   contra una de las variables del eje horizontal. Aparte de las variables dependientes,   puede resultar útil guardar los residuos de regresión y utilizar esas   variables aquí para evaluar la idoneidad de la   regresión.</p>
+
+  <p><span class="runinhead">Variables del eje horizontal</span>   Seleccione una o más variables contra las que se trazarán las otras. Si una variable   tiene un nivel de medición de escala de escala, el gráfico será un diagrama de dispersión.
+  Si es categórico, el gráfico será un gráfico de barras o un diagrama de caja.</p>
+
+  <p>Los controles siguientes se aplican únicamente a los puntos.</p>
+
+  <p><span class="runinhead">Colorear por</span> Elija una variable de agrupación   por la que colorear los puntos del diagrama de dispersión. Puede ser de escala o   categórica.</p>
+
+  <p><span class="runinhead">Tamaño por</span> Elija una variable categórica   o de escala que utilizar para determinar el tamaño de los puntos de un   diagrama de dispersión. Puede resultar útil elegir una variable de optimización   o de influencia de una regresión de aquí.</p>
+
+  <p><span class="runinhead">Forma por</span> Elija una variable categórica   para determinar la forma de los puntos de un diagrama de dispersión.</p>
+
+  <p><span class="runinhead">Etiqueta por</span> Elija una variable para   etiquetar los puntos de un diagrama de dispersión o un diagrama de caja.</p>
+
+  <h2>Opciones</h2>
+
+  <p><span class="runinhead">Título del gráfico</span> Especifique un título   para los gráficos. El título sólo se mostrará en los gráficos no panelados   sin diagramas de dispersión adyacentes. También aparecerá en la tabla de configuración   que acompaña a los gráficos.</p>
+
+  <p><span class="runinhead">Líneas de ajuste de diagrama de dispersión</span> Las líneas de ajuste   pueden ser lineales, cuadráticas, cúbicas o loess. Cada tipo utiliza   un patrón de línea distinto.</p>
+
+  <p><span class="runinhead">Agrupación</span> Las líneas de ajuste pueden ser   para todos los puntos o, si hay una variable de color categórica, puede haber   líneas separadas para cada grupo.</p>
+
+  <p><span class="runinhead">Gráficos de variables categóricas</span>   Los gráficos horizontales categóricos pueden ser diagramas de barras de medias, diagramas de líneas de medias   o diagramas de caja.</p>
+
+  <p><span class="runinhead">Agrupar puntos en los gráficos de dispersión</span>   Marque esta casilla para agrupar los puntos en clases. Esto puede resultar especialmente   útil si hay muchos puntos o si desea concentrar la atención en puntos aislados.</p>
+
+  <p><span class="runinhead">Gráficos de caja adyacentes   a los diagramas de dispersión</span> Si los gráficos no están panelados, puede marcar este recuadro   para incluir diagramas de caja para las variables verticales y horizontales de cada   diagrama de dispersión.</p>
+
+  <p><span class="runinhead">Parámetros de diseño de gráficos</span> De forma   predeterminada, cada gráfico va aparte. Puede especificar el número de   gráficos que desea panelar. Si los gráficos están panelados, las leyendas y los   diagramas de caja adyacentes no se muestran, sino que la información de leyenda aparece   en la tabla de configuración.</p>
+
+  <p><span class="runinhead">Tamaño de página</span> Especifique los valores de tamaño   horizontal y vertical de página para cambiar el tamaño de un gráfico. Una fila de   gráficos panelados cuenta como un gráfico al definir el tamaño. Se debe especificar tanto el tamaño   vertical como el horizontal si se especifica uno de los dos.
+  Las medidas son en pulgadas.</p>
+
+  <p><span class="runinhead">Parámetros para varios gráficos por   fila</span> Si las etiquetas o loas leyendas de los gráficos son largas,   con la configuración predeterminada puede ocurrir que queden cortadas o que   ocupen parte de otro gráfico. Para mejorar esto, se pueden utilizar los siguientes parámetros.
+  Los valores son en porcentajes.</p>
+
+  <h2>Características adicionales</h2>
+
+  <p>Este diálogo genera sintaxis para el comando de extensión   STATS REGRESS PLOT. Para mostrar la ayuda de este comando, ejecute la siguiente sintaxis:</p>
+
+  <p class="codeblock">STATS REGRESS PLOT /HELP.</p>
+
+  <h2>Requisitos</h2>Este comando requiere Python Essentials y el comando de extensión STATS REGRESS PLOT. Puede descargarlos desde la Comunidad de SPSS en www.ibm.com/developerworks/spssdevcentral.<br>
+  <hr>
+  <p style="font-size:80%;">
+  © Copyright IBM Corp. 1989, 2013</p>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Plots Useful for Regression Relationships</title>
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+  </style>
+</head>
+
+<body>
+  <h1>Plots Useful for Regression Relationships</h1>This command
+  displays a set of plots that may be useful in assessing
+  regression type relationships between one or more dependent
+  variables and a set of explanatory variables, although they are
+  not limited to this use. These charts are not partial plots.
+
+  <p><span class="runinhead">Vertical-Axis Variables</span> Select
+  one or more scale-level dependent variables. Each will be plotted
+  against each of the horizontal-axis variables. Besides dependent
+  variables, it may be useful to save regression residuals and use
+  those variables here in order to assess the adequacy of the
+  regression.</p>
+
+  <p><span class="runinhead">Horizontal-Axis Variables</span>
+  Select one or more variables to be plotted against. If a variable
+  has a scale measurement level, the graph will be a scatterplot.
+  If it is categorical, the graph will be a bar chart, a line
+  chart, or a boxplot.</p>
+
+  <p>The following controls apply only to points.</p>
+
+  <p><span class="runinhead">Color by</span> Choose a grouping
+  variable to color scatterplot points by. It can be scale or
+  categorical.</p>
+
+  <p><span class="runinhead">Size by</span> Choose a categorical or
+  scale variable to use to determine the size of points in a
+  scatterplot. It may be useful to choose a leverage or influence
+  variable from a regression here.</p>
+
+  <p><span class="runinhead">Shape by</span> Choose a categorical
+  variable to determine the shape of points in a scatterplot.</p>
+
+  <p><span class="runinhead">Label by</span> Choose a variable to
+  label points in a scatterplot or boxplot.</p>
+
+  <h2>Options</h2>
+
+  <p><span class="runinhead">Chart Title</span> Enter a title for
+  the charts. The title will be displayed only for unpaneled charts
+  without bordering boxplots. It will also appear in the Settings
+  table accompanying the charts.</p>
+
+  <p><span class="runinhead">Scatterplot Fit Lines</span> Fit lines
+  can be one or more of linear, quadratic, cubic, or loess. Each
+  type uses a different line pattern.</p>
+
+  <p><span class="runinhead">Grouping</span> Fit lines can be for
+  all points together or, if there is a categorical color variable,
+  there can be separate lines for each group.</p>
+
+  <p><span class="runinhead">Categorical Variable Plots</span>
+  Categorical horizontal plots can be bar charts of means, line
+  charts of means, or boxplots.</p>
+
+  <p><span class="runinhead">Bin points in scatterplots</span>
+  Check this box to group points into bins. This can be
+  particularly helpful if there are many points or if you want to
+  focus on isolated points.</p>
+
+  <p><span class="runinhead">Bordered boxplots for
+  scatterplots</span> If charts are not paneled, check this box to
+  include boxplots for the vertical and horizontal variables in
+  each scatterplot.</p>
+
+  <p><span class="runinhead">Chart Layout Parameters</span> By
+  default, each chart is separate. You can specify the number of
+  charts to panel across. If charts are paneled, legends and
+  bordering boxplots are not displayed, but legend information
+  appears in the settings table.</p>
+
+  <p><span class="runinhead">Page Size</span> Enter vertical and
+  horizontal page size values to change the size of a chart. A row
+  of paneled charts counts as one chart when sizing. Both vertical
+  and horizontal size must be specified if either is given.
+  Measures are in inches.</p>
+
+  <p><span class="runinhead">Parameters for Multiple Charts Per
+  Row</span> If chart labels or legends are large, they may be
+  clipped or spill over into another chart with the default
+  settings. These parameters can be used to improve this behavior.
+  Values are in percent.</p>
+
+  <h2>Additional Features</h2>
+
+  <p>This dialog generates syntax for the STATS REGRESS PLOT
+  extension command. To display help for this command, run the
+  following syntax:</p>
+
+  <p class="codeblock">STATS REGRESS PLOT /HELP.</p>
+
+  <h2>Requirements</h2>This command requires the Python Essentials
+  and the STATS REGRESS PLOT extension command. You can download
+  these from the SPSS Community at
+  www.ibm.com/developerworks/spssdevcentral.<br>
+  <hr>
+  <p style="font-size:80%;">
+  © Copyright IBM Corp. 1989, 2013</p>
+</body>
+</html>

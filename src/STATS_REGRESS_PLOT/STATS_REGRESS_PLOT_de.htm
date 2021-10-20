@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Nützliche Diagramme für Regressionsbeziehungen</title>
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+  </style>
+</head>
+
+<body>
+  <h1>Nützliche Diagramme für Regressionsbeziehungen</h1>Dieser Befehl zeigt eine Reihe von Diagrammen an, die für die Auswertung von Regressionstypbeziehungen zwischen einer oder mehreren abhängigen Variablen und einem Satz erklärender Variablen nützlich sein können. Sie sind jedoch nicht auf diese Verwendung beschränkt. Diese Diagramme sind keine Teildiagramme.
+
+  <p><span class="runinhead">Vertikale Achsenvariablen</span> Wählen Sie mindestens eine abhängige Variable mit metrischem Niveau aus. Jede Variable wird gegen die horizontalen Achsenvariablen abgebildet. Neben abhängigen Variablen kann es nützlich sein, Regressionsresiduen zu speichern und diese Variablen hier zu verwenden, um die Angemessenheit der Regression zu bewerten.</p>
+
+  <p><span class="runinhead">Horizontale Achsenvariablen</span> Wählen Sie mindestens eine Variable für die Gegenachse aus. Wenn eine Variable ein metrisches Messniveau hat, handelt es sich bei der Kurve um ein Streudiagramm.
+  Wenn es sich um eine kategoriale Variable handelt, ist die Kurve ein Balkendiagramm, Liniendiagramm oder Boxplot.</p>
+
+  <p>Folgende Steuerelemente gelten nur für Punkte.</p>
+
+  <p><span class="runinhead">Farbe nach</span> Wählen Sie eine Gruppierungsvariable aus, nach der die Farbe für die Punkte in einem Streudiagramm bestimmt werden soll. Diese kann metrisch oder kategorial sein.</p>
+
+  <p><span class="runinhead">Größe nach</span> Wählen Sie eine kategoriale oder metrische Variable aus, nach der die Größe der Punkte in einem Streudiagramm bestimmt werden soll. Es kann nützlich sein, hier eine Einflussvariable aus einer Regression zu wählen.</p>
+
+  <p><span class="runinhead">Form nach</span> Wählen Sie eine kategoriale Variable aus, nach der die Form der Punkte in einem Streudiagramm bestimmt werden soll.</p>
+
+  <p><span class="runinhead">Beschriften anhand</span> Wählen Sie eine Variable aus, nach der die Punkte in einem Streudiagramm oder Boxplot beschriftet werden sollen.</p>
+
+  <h2>Optionen</h2>
+
+  <p><span class="runinhead">Titel für Diagramm</span> Geben Sie einen Titel für die Diagramme ein. Der Titel wird nur für Diagramme ohne Feldaufteilung und ohne angrenzende Boxplots angezeigt. Er wird zudem in der Einstellungstabelle zu den Diagrammen angegeben.</p>
+
+  <p><span class="runinhead">Anpassungslinien für Streudiagramm</span> Anpassungslinien können eine oder mehrere Linien vom Typ linear, quadratisch, kubisch oder Loess sein. Jeder Typ hat ein anderes Linienmuster.</p>
+
+  <p><span class="runinhead">Gruppieren</span> Anpassungslinien können für alle Punkte zusammen verwendet werden, oder, wenn eine kategoriale Farbvariable ausgewählt ist, können für jede Gruppe separate Linien verwendet werden.</p>
+
+  <p><span class="runinhead">Kategoriale Variablendiagramme</span> Bei kategorialen horizontalen Diagrammen kann es sich um Balkendiagramme der Mittelwerte, Liniendiagramme der Mittelwerte oder Boxplots handeln.</p>
+
+  <p><span class="runinhead">Klassenpunkte in Streudiagrammen</span> Wählen Sie dieses Kontrollkästchen aus, um Punkte in Klassen zu gruppieren. Dies kann besonders nützlich sein, wenn viele Punkte vorhanden sind oder wenn Sie sich auf einzelne Punkte konzentrieren möchten.</p>
+
+  <p><span class="runinhead">Angrenzende Boxplots für Streudiagramme</span> Wenn die Diagramme nicht in Felder aufgeteilt sind, wählen Sie dieses Kontrollkästchen aus, um für die vertikalen und horizontalen Variablen in jedem Streudiagramm Boxplots anzuzeigen.</p>
+
+  <p><span class="runinhead">Diagrammlayoutparameter</span> Standardmäßig wird jedes Diagramm separat dargestellt. Sie können angeben, wie viele Diagramme in einem Feld dargestellt werden sollen. Wenn Diagramme Felder enthalten, werden keine Legenden oder angrenzenden Boxplots angezeigt, die Legendeninformationen werden jedoch in der Einstellungstabelle aufgeführt.</p>
+
+  <p><span class="runinhead">Seitenlänge</span> Geben Sie einen Wert für die vertikale und horizontale Seitenlänge ein, um die Größe eines Diagramms zu ändern. Eine Reihe von Diagrammen in einem Feld zählt bei der Größenbestimmung als ein Diagramm. Die vertikale und die horizontale Länge müssen immer zusammen angegeben werden.
+  Als Maßeinheit wird Zoll verwendet.</p>
+
+  <p><span class="runinhead">Parameter für mehrere Diagramme pro Zeile</span> Wenn Diagrammbeschriftungen oder -legenden lang sind, werden sie bei Verwendung der Standardeinstellungen möglicherweise abgeschnitten oder erstrecken sich in ein anderes Diagramm hinein. Mithilfe dieser Parameter kann dieses Verhalten verbessert werden.
+  Die Werte werden in Prozent angegeben.</p>
+
+  <h2>Weitere Funktionen</h2>
+
+  <p>In diesem Dialogfeld wird Syntax für den Erweiterungsbefehl STATS REGRESS PLOT generiert. Führen Sie folgende Syntax aus, um Hilfe für diesen Befehl anzuzeigen:</p>
+
+  <p class="codeblock">STATS REGRESS PLOT /HELP.</p>
+
+  <h2>Anforderungen</h2>Für diesen Befehl sind Python Essentials und der Erweiterungsbefehl STATS REGRESS PLOT erforderlich. Sie können diese von der SPSS Community unter www.ibm.com/developerworks/spssdevcentral herunterladen.<br>
+  <hr>
+  <p style="font-size:80%;">
+  © Copyright IBM Corp. 1989, 2013</p>
+</body>
+</html>

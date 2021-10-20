@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Wykresy przydatne dla związków regresji</title>
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+  </style>
+</head>
+
+<body>
+  <h1>Wykresy przydatne dla związków regresji</h1>Ta komenda wyświetla zestaw wykresów, który może być użyteczny przy ocenianiu typu związków regresji między przynajmniej jedną lub wieloma zmiennymi zależnymi a zestawem zmiennych objaśniających, choć procedura nie ogranicza się tylko do tego. Wykresy te nie są wykresami cząstkowymi.
+
+  <p><span class="runinhead">Zmienne osi pionowej</span> Wybierz jedną lub więcej zmiennych zależnych z ilościowym poziomem pomiaru. Każda z nich zostanie wykreślona w odniesieniu do każdej zmiennej osi poziomej. Oprócz zmiennych zależnych, użytecznym może okazać się zapisanie reszt regresji i użycie tych zmiennych w tym miejscu w celu oszacowania adekwatności regresji.</p>
+
+  <p><span class="runinhead">Zmienne osi poziomej</span>
+  Wybierz jedną lub więcej zmiennych, w odniesieniu do których tworzone będą wykresy. Jeśli zmienna posiada  ilościowy poziom pomiaru, wykres będzie wykresem rozrzutu.
+  Jeśli jest ona jakościowa, wykres będzie wykresem słupkowym, liniowym lub skrzynkowym.</p>
+
+  <p>Następujące elementy sterujące dotyczą tylko punktów.</p>
+
+  <p><span class="runinhead">Kolor według</span> Wybierz zmienną grupującą, którą zostanie pokolorowany wykres rozrzutu. Może być ona zmienną ilościową lub zmienną jakościową.</p>
+
+  <p><span class="runinhead">Rozmiar według</span> Wybierz zmienną jakościową lub ilościową, która zostanie wykorzystana do określenia rozmiaru punktów na wykresie rozrzutu. Pomocnym może być wybranie w tym miejscu z regresji zmiennej wpływu lub oddziaływania.</p>
+
+  <p><span class="runinhead">Kształt według</span> Wybierz zmienną jakościową, aby określić kształt punktów na wykresie rozrzutu.</p>
+
+  <p><span class="runinhead">Etykiety według</span> Wybierz zmienną do opisu etykietami punktów na wykresie rozrzutu lub wykresie skrzynkowym.</p>
+
+  <h2>Opcje</h2>
+
+  <p><span class="runinhead">Tytuł wykresu</span> Wprowadź tytuł dla wykresów. Tytuł będzie wyświetlany tylko dla wykresów bez paneli, nieposiadających wykresów skrzynkowych na brzegach. Pojawi się on także w tabeli Ustawienia dołączonej do wykresów.</p>
+
+  <p><span class="runinhead">Linie dopasowania wykresu rozrzutu</span>Może być jedna lub może być więcej linii dopasowania, które mogą reprezentować funkcje liniowe, kwadratowe, sześcienne lub krzywą loess. Każdy typ używa innego wzoru linii.</p>
+
+  <p><span class="runinhead">Grupowanie</span> Linie dopasowania mogą być tworzone dla wszystkich punktów razem lub, jeśli istnieje jakościowa zmienna koloru, można stworzyć oddzielne linie dla każdej grupy.</p>
+
+  <p><span class="runinhead">Wykresy zmiennych jakościowych</span>
+  Jakościowe wykresy poziome mogą być wykresami słupkowymi średnich, wykresami liniowymi średnich lub wykresami skrzynkowymi.</p>
+
+  <p><span class="runinhead">Grupowanie punktów na wykresach rozrzutu</span>
+  Zaznacz tę opcję, aby pogrupować punkty. Może to być użyteczne zwłaszcza w przypadku występowania na wykresie wielu punktów lub jeśli chcesz skupić się na wyizolowanych punktach.</p>
+
+  <p><span class="runinhead">Wykresy skrzynkowe na brzegach pojedynczych wykresów rozrzutu</span> Jeśli wykresy nie mają paneli, zaznacz tę opcję, aby dołączyć wykresy skrzynkowe dla pionowych i poziomych zmiennych na każdym wykresie rozrzutu.</p>
+
+  <p><span class="runinhead">Parametry układu wykresu</span> Domyślnie każdy wykres jest osobny. Możesz określić liczbę wykresów, które zostaną ustawione obok siebie w panelu. Jeśli wykresy są ułożone w panele, legendy i wykresy skrzynkowe na brzegach nie są wyświetlane, a informacje z legendy wykresu pojawiają się w tabeli ustawień.</p>
+
+  <p><span class="runinhead">Wymiary strony</span> Wprowadź wartości wymiarów pionowych i poziomych, aby zmienić rozmiar wykresu. Podczas zmiany rozmiaru, wiersz wykresów w panelu jest liczony jako jeden wykres. Należy określić zarówno wymiar pionowy, jak i poziomy, jeśli podawany jest jeden z nich.
+  Jednostki wyrażone są w calach.</p>
+
+  <p><span class="runinhead">Parametry dla wielu wykresów w jednym wierszu</span> Jeśli etykiety lub legendy są duże, przy ustawieniach domyślnych mogą one zostać przycięte lub znaleźć się na innym wykresie. Można użyć tych parametrów, aby poprawić prezentację etykiet i legend.
+  Wartości podawane są w procentach.</p>
+
+  <h2>Funkcje dodatkowe</h2>
+
+  <p>To okno dialogowe generuje składnię dla komendy rozszerzającej STATS REGRESS PLOT. Aby wyświetlić pomoc dotyczącą tej komendy, uruchom następującą komendę:</p>
+
+  <p class="codeblock">STATS REGRESS PLOT /HELP.</p>
+
+  <h2>Wymagania</h2>Ta komenda wymaga dodatku Python Essentials
+  oraz komendy rozszerzającej STATS REGRESS PLOT. Można je pobrać z serwisu SPSS Community pod adresem www.ibm.com/developerworks/spssdevcentral/.<br>
+  <hr>
+  <p style="font-size:80%;">
+  © Copyright IBM Corp. 1989, 2013</p>
+</body>
+</html>

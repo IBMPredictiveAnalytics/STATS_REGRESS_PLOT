@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>对回归关系有用的图</title>
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+  </style>
+</head>
+
+<body>
+  <h1>对回归关系有用的图</h1>此命令将显示一组图，这些图对于评估一个或多个因变量与一组解释变量之间的回归类型关系可能非常有用，尽管这些图的用途并非仅限于此。这些图表不是局部图。
+  <p><span class="runinhead">垂直轴变量</span>
+请选择一个或多个标度级因变量。每个垂直轴变量都将针对每个水平轴变量进行绘制。除了使用因变量以外，保存回归残差并在此处使用那些变量以评估回归的充分性也可能非常有帮助。</p>
+
+  <p><span class="runinhead">水平轴变量</span>
+请选择一个或多个要针对其进行绘制的变量。如果某个变量具有标度测量级别，那么将显示散点图。如果是分类变量，那么将显示条形图、折线图或箱图。</p>
+
+  <p>下列控件仅适用于点。</p>
+
+  <p><span class="runinhead">着色依据</span> 请选择一个分组变量，以便根据此变量对散点图中的点进行着色。此变量可以是标度变量或分类变量。</p>
+
+  <p><span class="runinhead">大小依据</span> 请选择一个分类变量或标度变量，用于确定散点图中各个点的大小。在此处，选择回归中的杠杆或影响变量可能有帮助。</p>
+
+  <p><span class="runinhead">形状依据</span> 请选择一个分类变量，用于确定散点图中各个点的形状。</p>
+
+  <p><span class="runinhead">标注依据</span> 请选择一个变量，用于标注散点图或箱图中的各个点。</p>
+
+  <h2>选项</h2>
+
+  <p><span class="runinhead">图表标题</span>
+请输入图表的标题。仅对于没有边界箱图的非面板式图表，才会显示标题。此标题还将显示在图表附带的“设置”表中。</p>
+
+  <p><span class="runinhead">散点图拟合线</span> 拟合线可以是线性拟合线、二次拟合线、三次拟合线或 Loess 拟合线中的一种或多种。每种类型使用一种不同的线型。</p>
+
+  <p><span class="runinhead">分组</span> 拟合线可以针对所有的点进行绘制，如果存在分类颜色变量，那么每个组可以有各自的线条。</p>
+
+  <p><span class="runinhead">分类变量图</span> 分类水平图可以是平均值条形图、平均值折线图或箱图。</p>
+
+  <p><span class="runinhead">对散点图中的点进行分箱</span> 选中此框表示对各个点进行分箱。如果存在许多点，或者您希望将注意力集中到隔离的点，那么进行分箱将特别有帮助。</p>
+
+  <p><span class="runinhead">散点图的边界箱图</span> 对于非面板式图表，选中此框可以包括每个散点图中的垂直变量和水平变量的箱图。</p>
+
+  <p><span class="runinhead">图表布局参数</span> 缺省情况下，每个图表都是单独的图表。您可以指定要包括在面板中的图表数。对于面板式图表，将不会显示图注和边界箱图，但图注信息将显示在设置表中。</p>
+
+  <p><span class="runinhead">页面大小</span> 请输入垂直及水平页面大小值，以更改图表大小。调整大小时，一行面板式图表算作一个图表。垂直大小和水平大小必须同时指定或不指定。测量值以英寸为单位。</p>
+
+  <p><span class="runinhead">每行多图表参数</span> 使用缺省设置时，如果图表标签或图注较大，那么它们可能会截断或者延伸到另一个图表中。这些参数可用于改善此行为。值以百分比为单位。</p>
+
+  <h2>其他功能部件</h2>
+
+  <p>此对话框将生成 STATS REGRESS PLOT 扩展命令的语法。要显示此命令的帮助，请运行以下语法：</p>
+
+  <p class="codeblock">STATS REGRESS PLOT /HELP。</p>
+
+  <h2>要求</h2>此命令使用 Python Essentials 和 STATS REGRESS PLOT
+扩展命令。您可以从 SPSS Community (www.ibm.com/developerworks/spssdevcentral)
+进行下载。<br>
+  <hr>
+  <p style="font-size:80%;">
+  © Copyright IBM Corp. 1989, 2013</p>
+</body>
+</html>

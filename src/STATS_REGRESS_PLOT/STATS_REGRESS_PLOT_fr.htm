@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Tracés utiles pour les relations de régression</title>
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+  </style>
+</head>
+
+<body>
+  <h1>Tracés utiles pour les relations de régression</h1>Cette commande affiche un ensemble de tracés qui peuvent être utiles pour évaluer les relations de type régression entre une ou plusieurs variables dépendantes et un ensemble de variables explicatives bien que ces tracés ne soient pas limités à cette utilisation. Ces graphiques ne sont pas partiels.
+
+  <p><span class="runinhead">Variables d'axe vertical</span> Sélectionnez une ou plusieurs variables dépendantes du niveau d'échelle. Chacune sera tracée en fonction de chaque variable d'axe horizontal. En plus des variables dépendantes, il peut être utile d'enregistrer les résiduels de régression et d'utiliser ces variables ici pour évaluer l'adéquation de la régression.</p>
+
+  <p><span class="runinhead">Variables d'axe horizontal</span> Sélectionnez une ou plusieurs variables en fonction desquelles effectuer un tracé. Si une variable a un niveau de mesure d'échelle, le graphique sera un nuage de points.
+  Si la variable est catégorielle, le graphique sera un graphique à barres, linéaire ou diagramme à surfaces.</p>
+
+  <p>Les contrôles suivants s'appliquent uniquement aux points.</p>
+
+  <p><span class="runinhead">Couleur par</span> Choisissez une variable de regroupement avec laquelle colorer les points du nuage de points. Il peut s'agir d'une variable d'échelle ou catégorielle.</p>
+
+  <p><span class="runinhead">Taille par</span> Choisissez une variable d'échelle ou catégorielle à utiliser pour déterminer la taille des points d'un nuage de points. Il peut être utile de choisir ici un point de levier ou une variable influente depuis une régression.</p>
+
+  <p><span class="runinhead">Forme par</span> Choisissez une variable catégorielle pour déterminer la forme des points d'un nuage de points.</p>
+
+  <p><span class="runinhead">Libellé par</span> Choisissez une variable pour étiqueter les points d'un nuage de points ou d'un diagramme à surfaces.</p>
+
+  <h2>Options</h2>
+
+  <p><span class="runinhead">Titre du graphique</span> Saisissez un titre pour les graphiques. Le titre s'affichera uniquement pour les graphiques qui ne sont pas en panneaux et dépourvus de diagrammes à surfaces avec bordures. Il apparaîtra également dans la table Paramètres qui accompagne les graphiques.</p>
+
+  <p><span class="runinhead">Courbes d'ajustement de nuages de points</span> Les courbes d'ajustement peuvent être une ou plusieurs courbes linéaires, quadratiques, cubiques ou de loess. Chaque type utilise un motif de courbe différent.</p>
+
+  <p><span class="runinhead">Regroupement</span> Les courbes d'ajustement peuvent être pour tous les points ou, s'il y a une variable de couleur catégorielle, elles peuvent être des courbes séparées pour chaque groupe.</p>
+
+  <p><span class="runinhead">Graphiques de variables catégorielles</span> Les graphiques horizontaux catégoriels peuvent être des graphiques à barres de moyennes, des graphiques linéaires de moyennes ou des diagramme à surfaces.</p>
+
+  <p><span class="runinhead">Regrouper les points en classes dans les nuages de points</span> Cochez cette case pour regrouper les points en classes. Cela peut être particulièrement utile s'il y a de nombreux points ou si vous souhaitez vous focaliser sur des points isolés.</p>
+
+  <p><span class="runinhead">Diagramme à surfaces avec bordures pour les nuages de points</span> Si les graphiques ne sont pas sous forme de panels, cochez cette case pour inclure des diagramme à surfaces pour les variables verticales et horizontales dans chaque nuage de points.</p>
+
+  <p><span class="runinhead">Paramètres de la présentation des graphiques</span> Par défaut, chaque graphique est représenté séparément. Vous pouvez spécifier le nombre de graphiques à présenter sous forme de panel. Si les graphiques sont sous forme de panels, les légendes et les diagrammes à surfaces avec bordures n'apparaissent pas, mais des informations sur les légendes s'affichent dans la table des paramètres.</p>
+
+  <p><span class="runinhead">Taille de page</span> Saisissez les valeurs de la taille de la page verticale et horizontale pour modifier la taille d'un graphique. Une ligne de graphiques en panneaux compte comme un seul graphique lors de l'ajustement de la taille. Les tailles verticale et horizontale doivent être spécifiées si elles sont indiquées.
+  Les mesures sont en pouce.</p>
+
+  <p><span class="runinhead">Paramètres de plusieurs graphiques par ligne</span> Si des libellés ou des légendes de graphiques sont de taille importante, ils peuvent être rognés ou transmis à un autre graphique avec les paramètres par défaut. Ces paramètres peuvent être utilisés pour améliorer ce comportement.
+  Les valeurs sont en pourcentage.</p>
+
+  <h2>Fonctions supplémentaires</h2>
+
+  <p>Cette boîte de dialogue génère une syntaxe pour la commande d'extension STATS REGRESS PLOT. Pour afficher l'aide de cette commande, exécutez la syntaxe suivante :</p>
+
+  <p class="codeblock">STATS REGRESS PLOT /HELP.</p>
+
+  <h2>Conditions requises</h2>Cette commande nécessite Python Essentials et la commande d'extension STATS REGRESS PLOT. Vous pouvez les télécharger depuis la communauté SPSS à l'adresse www.ibm.com/developerworks/spssdevcentral.<br>
+  <hr>
+  <p style="font-size:80%;">
+  © Copyright IBM Corp. 1989, 2013</p>
+</body>
+</html>
