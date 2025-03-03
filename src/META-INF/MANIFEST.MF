@@ -1,4 +1,5 @@
 Name: STATS REGRESS PLOT
+Display-Name: Regression Plots
 Dialog-Specs: STATS_REGRESS_PLOT.spd
 Command-Specs: STATS_REGRESS_PLOT.xml
 Code-Files: STATS_REGRESS_PLOT.py
